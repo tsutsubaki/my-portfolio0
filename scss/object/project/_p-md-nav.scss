@@ -1,0 +1,26 @@
+@use '../../foundation/global' as g;
+
+
+.p-md_nav {
+    @include g.mq(md) {
+        right: inherit;
+        height: 0;
+        opacity: inherit;
+    }
+}
+
+
+#menu-sidebar-nav {
+    @include g.mq(md) {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -50px;
+
+    }
+}
+
+li.menu-item a {
+    @include g.mq(md) {
+        padding-right: 20px;
+    }
+}

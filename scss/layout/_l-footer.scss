@@ -1,0 +1,21 @@
+@use '../foundation/global' as g;
+
+footer {
+    /*footerの装飾*/
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #3E4550;
+}
+
+.l-footer_description {
+    font-size: 14px;
+    margin-top: 4vw;
+}
+
+.l-footer_descriptionsub {
+    font-size: 10px;
+    margin-top: 3vw;
+}

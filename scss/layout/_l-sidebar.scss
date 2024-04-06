@@ -1,0 +1,74 @@
+@use '../foundation/global' as g;
+
+
+.l-sidebar {
+
+
+    &_nav {
+        position: absolute;
+        height: 100%;
+        width: 200px;
+        -webkit-overflow-scrolling: touch;
+        z-index: 999;
+        background-color: #C8F3F9;
+        /*動き*/
+        transition: all 0.6s;
+        right: -100%;
+        top: 0px;
+        @include g.font-size(22);
+
+        @include g.mq(lg) {
+            padding-bottom: 10000px;
+            margin-bottom: -10000px;
+            transition: none;
+            position: static;
+
+        }
+
+
+        &.active {
+            right: 0;
+            transition: all 0.6s;
+            overflow: scroll;
+            height: 100%;
+
+            @include g.mq(lg) {
+                overflow: visible;
+            }
+
+        }
+
+    }
+
+
+    @include g.mq(lg) {
+        margin-bottom: 638px;
+        margin-top: 140px;
+    }
+
+}
+
+// .nav_list {
+//     margin: 70px 50px;
+//     /* margin-left: 20px; */
+//     line-height: 38px;
+// }
+
+// .nav-bg::before {
+//     position: relative;
+//     content: url(../img/bg.svg);
+//     width: 100%;
+//     height: 100%;
+//     animation: pulsing-heart .5s infinite;
+
+//     @include g.mq(md) {
+//         display: none;
+
+//     }
+// }
+
+// #menu-sidebar-nav {
+//     position: absolute;
+//     width: 100%;
+//     top: 170px;
+// }

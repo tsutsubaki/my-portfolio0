@@ -1,0 +1,47 @@
+@use "sass:math";
+
+@mixin bg-img($path, $size: cover, $pos: center center, $repeat: no-repeat) {
+    background-image: url($path);
+    background-size: $size;
+    background-position: $pos;
+    background-repeat: $repeat;
+}
+
+@mixin font-size($size, $base: 16) {
+    font-size: $size + px;
+    font-size: math.div($size , $base) + rem;
+}
+
+/////レスポンシブ//////
+// マップ型変数を定義
+$breakpoints: (
+    'md': 'screen and (min-width: 600px)',
+    'lg': 'screen and (min-width: 1025px)',
+    ) !default;
+
+// メディアクエリ用 mixin デフォルトはmd
+@mixin mq($arg-breakpoint: md) {
+    @media #{map-get($breakpoints, $arg-breakpoint)} {
+        @content;
+    }
+}
+
+
+//pxをvwに変換するfunction
+@function _get_vw($size, $viewport) {
+    $rate: calc(100 / $viewport
+);
+@return $rate * $size * 1vw;
+}
+
+//フォント用のmixin
+@mixin font-vw($font_size: 10, $viewsize: 375) {
+    font-size: $font_size * 1px;
+    font-size: _get_vw($font_size, $viewsize);
+}
+
+//画像用のmixin
+@mixin img-vw($img_size, $viewsize: 375) {
+    width: $img_size * 1px;
+    width: _get_vw($img_size, $viewsize);
+}

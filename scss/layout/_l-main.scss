@@ -1,0 +1,58 @@
+@use '../foundation/global' as g;
+
+main {
+    position: relative;
+    text-align: center;
+}
+
+.l-main_contents h1 {
+    text-align: center;
+}
+
+.l-fontsize_large {
+    font-size: 7vw;
+}
+
+.l-fontsize_sub {
+    font-size: 3vw;
+    line-height: 11vw;
+}
+
+//文字を縦書きにする
+.l-rotate {
+    transform: rotate(90deg);
+}
+
+.l-margin {
+    margin-top: 25vw;
+    margin-left: -15vw;
+}
+
+.l-margin_right {
+    margin: 23vw 0 13vw 63vw;
+}
+
+.l-margin_left {
+    margin-top: 12vw;
+}
+
+.l-flex {
+    display: flex;
+}
+
+.l-line_height {
+    line-height: 27vw;
+}
+
+.l-about_contents {
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: Pt Sans;
+    color: #ffffffff;
+    -webkit-text-stroke: 1px #333;
+    margin-top: -2vw;
+    font-size: 7vw;
+    margin-left: 3vw;
+}

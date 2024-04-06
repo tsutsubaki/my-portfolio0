@@ -1,0 +1,71 @@
+@use '../../foundation/global' as g;
+
+.contact-item {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-submit {
+    background-color: #C63205;
+    padding: .5em 2em;
+    color: #fff;
+    border: none;
+}
+
+.contact-list {
+    display: table;
+    width: 100%;
+}
+
+.contact-list .contact-item-title {
+    width: 20%;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.contact-list .contact-item-input {
+    width: 76%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 2%;
+}
+
+//about
+
+.l-main_contents {
+    margin: 10vw;
+}
+
+.has-text-align-left {
+    text-align: left;
+    font-size: 3vw;
+    margin-top: 8vw;
+    margin-bottom: 10vw;
+}
+
+h4.wp-block-heading {
+    font-size: 2vw;
+}
+
+h5.wp-block-heading {
+    height: 80vh;
+}
+
+.wp-block-group__inner-container p {
+    font-size: 3vw;
+    margin: 7vw 0;
+    line-height: 5vw;
+
+    @include g.mq(md) {
+        font-size: 2vw;
+
+    }
+
+}
+
+//works
+.wp-block-details summary {
+    font-size: 3vw;
+}

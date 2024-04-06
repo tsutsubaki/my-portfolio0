@@ -1,0 +1,122 @@
+@use '../../foundation/global' as g;
+
+.l-thumbnail {
+    width: fit-content;
+    margin: auto;
+}
+
+.site-title_move {
+    display: flex;
+}
+
+.site-title_move span {
+    font-weight: bold;
+    font-size: 31px;
+    padding-left: 10px;
+    // アニメーション関連
+    opacity: 0;
+    animation: textanimation 5s infinite forwards;
+}
+
+.site-title_move span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.site-title_move span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.site-title_move span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.site-title_move span:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@keyframes textanimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// 文章入力
+.l-content_description {
+    font-size: 13px;
+    position: absolute;
+    margin-top: -28vw;
+    margin-left: 21vw;
+    width: 64%;
+    line-height: 6vw;
+}
+
+// work
+
+.l-work {
+    font-weight: 400;
+    margin-top: -10vw;
+
+    &_description {
+        font-size: 3vw;
+        margin-top: 13px;
+    }
+
+    &_subdescription {
+        font-size: 2.5vw;
+        margin-top: 6px;
+        margin-bottom: 5vw;
+        display: inline-block;
+    }
+}
+
+.l-pic {
+    width: 80%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.l-pic1 {
+    margin-top: -9vw;
+}
+
+.l-pic2 {
+    margin-top: 15vw;
+}
+
+.l-pic3 {
+    margin-top: 15vw;
+}
+
+// Skill
+
+.l-skill {
+    background-color: aliceblue;
+}
+
+.l-pic_skill {
+    width: 12%;
+    margin-left: 3vw;
+}
+
+.l-skill_description {
+    font-size: 3vw;
+    width: 50%;
+    margin: 3vw auto;
+    background-color: aliceblue;
+    text-decoration: underline;
+}
+
+.l-skill_description1 {
+    justify-content: center;
+    margin-top: -20vw;
+}
+
+.l-skill_description2 {
+    justify-content: center;
+    margin-top: 10vw;
+}

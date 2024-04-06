@@ -1,0 +1,52 @@
+@use '../../foundation/global' as g;
+
+.c-scrolldown1 {
+    position: absolute;
+    left: 70px;
+    margin-top: 56px;
+    height: 50px;
+
+    @include g.mq(md) {
+        left: 30px;
+    }
+}
+
+.c-scrolldown1 span {
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    color: #3E4550;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    transform: rotate(90deg);
+}
+
+.c-scrolldown1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 30px;
+    background: #3E4550;
+    animation: pathmove 1.5s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
