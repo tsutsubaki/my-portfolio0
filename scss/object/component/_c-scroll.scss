@@ -13,8 +13,8 @@
 
 .c-scrolldown1 span {
     position: absolute;
-    left: -15px;
-    top: -15px;
+    left: -45px;
+    top: -35px;
     color: #3E4550;
     font-size: 12px;
     letter-spacing: 0.05em;
@@ -24,12 +24,13 @@
 .c-scrolldown1::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 6px;
     width: 1px;
     height: 30px;
     background: #3E4550;
     animation: pathmove 1.5s ease-in-out infinite;
     opacity: 0;
+    left: -25px;
 }
 
 @keyframes pathmove {

@@ -1,0 +1,27 @@
+@use '../foundation/global' as g;
+
+.l-sns_logo {
+    position: absolute;
+    width: 7%;
+    z-index: 10;
+    margin-top: -3vw;
+
+    @include g.mq(md) {
+        width: 5%;
+    }
+}
+
+.l-blog {
+    margin-left: 63vw;
+    border-radius: 50%;
+}
+
+.l-x {
+    margin-left: 70vw;
+    border-radius: 50%;
+
+    @include g.mq(md) {
+        margin-left: 68vw;
+    }
+
+}

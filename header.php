@@ -20,14 +20,16 @@
 
     <header class="l-header">
  
-
     <div class="l-logo">
-     <!-- ロゴをimgフォルダから取得 -->
-     <a href="<?php echo esc_url( home_url( ) ); ?>"><!--logを押したらトップページへ戻る-->
+    <a href="<?php echo esc_url( home_url('/') ); ?>"><!--logを押したらトップページへ戻る-->
+    
+    <!-- ロゴをimgフォルダから取得 -->
+    
     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.jpg" alt="logo">
-    </a></=>
+    
+    </a>
     </div>
-  
+
 
     <div class="p-header__hamburger">
           <button class="c-hamburger">

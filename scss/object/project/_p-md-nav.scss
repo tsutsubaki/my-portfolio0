@@ -3,9 +3,11 @@
 
 .p-md_nav {
     @include g.mq(md) {
-        right: inherit;
+        right: 0;
         height: 0;
         opacity: inherit;
+        width: 80%;
+        font-family: Pt Sans;
     }
 }
 
@@ -22,5 +24,7 @@
 li.menu-item a {
     @include g.mq(md) {
         padding-right: 20px;
+        margin-right: 2vw;
+        border-right: 1px solid #8f8e8e68;
     }
 }

@@ -1,5 +1,6 @@
 @use '../../foundation/global' as g;
 
+
 .l-thumbnail {
     width: fit-content;
     margin: auto;
@@ -46,77 +47,48 @@
 
 // 文章入力
 .l-content_description {
-    font-size: 13px;
+    font-size: 0.8rem;
     position: absolute;
-    margin-top: -28vw;
+    margin-top: -37vw;
     margin-left: 21vw;
-    width: 64%;
+    width: 70%;
     line-height: 6vw;
-}
 
-// work
+    @include g.mq(md) {
+        font-size: 1.2rem;
+        line-height: 5vw;
 
-.l-work {
-    font-weight: 400;
-    margin-top: -10vw;
-
-    &_description {
-        font-size: 3vw;
-        margin-top: 13px;
-    }
-
-    &_subdescription {
-        font-size: 2.5vw;
-        margin-top: 6px;
-        margin-bottom: 5vw;
-        display: inline-block;
     }
 }
 
-.l-pic {
-    width: 80%;
-    position: relative;
-    display: block;
+p.img {
+    width: max-content;
     margin: 0 auto;
 }
 
-.l-pic1 {
-    margin-top: -9vw;
+// Works
+.works-production {
+
+
+    @include g.mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
-.l-pic2 {
-    margin-top: 15vw;
+.works-production_second {
+
+
+    @include g.mq(md) {}
 }
 
-.l-pic3 {
-    margin-top: 15vw;
-}
-
-// Skill
-
-.l-skill {
-    background-color: aliceblue;
-}
-
-.l-pic_skill {
-    width: 12%;
-    margin-left: 3vw;
-}
-
-.l-skill_description {
+h3.workd-title {
     font-size: 3vw;
-    width: 50%;
-    margin: 3vw auto;
-    background-color: aliceblue;
-    text-decoration: underline;
-}
+    margin: 1vw 0vw 5vw 1vw;
+    padding-right: 4vw;
+    padding-left: 4vw;
 
-.l-skill_description1 {
-    justify-content: center;
-    margin-top: -20vw;
-}
-
-.l-skill_description2 {
-    justify-content: center;
-    margin-top: 10vw;
+    @include g.mq(md) {
+        font-size: 2vw;
+    }
 }

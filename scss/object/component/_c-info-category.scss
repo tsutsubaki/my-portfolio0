@@ -37,11 +37,11 @@
 .c-scroll {
     text-align: -webkit-right;
     position: relative;
+
 }
 
 .c-scroll a::before {
     display: block;
-    position: relative;
     content: "";
     overflow: hidden;
     background-image: url("../img/sclollUp.jpg");
@@ -50,7 +50,11 @@
     width: 220px;
     margin: 9vw -11vw 0 0;
     animation: rotation 10s infinite linear;
-    background-size: 75%
+
+    @include g.mq(lg) {
+        margin-right: -5vw;
+        margin-left: -2vw;
+    }
 }
 
 @keyframes rotation {
@@ -79,10 +83,31 @@
 
 
 .c-scroll_arrow {
-    display: block;
     position: absolute;
-    width: 100%;
-    margin-left: -8vw;
-    margin-top: 15vw;
     font-size: 11vw;
+    width: 100%;
+    margin-top: 17%;
+    margin-left: -8%;
+
+    @include g.mq(md) {
+        margin-left: -4%;
+        font-size: 7vw;
+        margin-top: 10%;
+
+    }
+
+    @include g.mq(lg) {
+        font-size: 4vw;
+        margin-top: 7%;
+        margin-left: 0%;
+    }
+}
+
+// 影をつける
+.box {
+    @include g.deboss-box(.15, .2, .7);
+    box-shadow: 10px 10px 4px #ccc;
+    padding-top: 4vw;
+    margin-right: 2vw;
+    margin-top: 4vw;
 }

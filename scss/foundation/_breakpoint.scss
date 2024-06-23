@@ -45,3 +45,8 @@ $breakpoints: (
     width: $img_size * 1px;
     width: _get_vw($img_size, $viewsize);
 }
+
+// 影を作る
+@mixin deboss-box($border: .1, $shadow: .05, $highlight: .8) {
+    border: 1px solid rgba(0, 0, 0, $border);
+}

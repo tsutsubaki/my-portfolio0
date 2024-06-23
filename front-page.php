@@ -15,8 +15,14 @@ Template Name: HAMBURGER index
 <section class="mv">
 
 <div class="l-main_pic ">
+<a href="https://blog.tsubakicode.com">
+<img class="l-blog l-sns_logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog.jpg" alt="blog">
+</a>
 
-	
+<a href="https://x.com/tsubaki___tsu">
+<img class="l-x l-sns_logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/x.jpg" alt="x">
+</a>
+
 <!-- PC画像をimgフォルダから取得 -->
 <img class="l-pc_pic" src="<?php echo get_stylesheet_directory_uri(); ?>/img/main_picPC2.jpg" alt="ocean">
 </div>
@@ -37,10 +43,10 @@ Template Name: HAMBURGER index
 </div>
 <div class="l-content_description">
 	<p>つくるものを通して繋がりを築き、新たな価値を生み出し、
-		さまざまな問題を解決するお手伝いをしたい。</p>
+		さまざまな問題を解決するお手伝いをしたいという想いで制作に取り組んでいます。</p>
 </div>
 <div class="c-more">
-	<a href="">more</a>
+	<a href="http://my-portfolio.local/about/">more</a>
 </div>
 </div>
 </section>
@@ -54,58 +60,42 @@ Template Name: HAMBURGER index
 </div>
 
 
-<div class="l-work_description1 c-fadeUp">
-	
-<img class="l-pic l-pic1" src="<?php echo get_stylesheet_directory_uri(); ?>/img/RaiseTeck.jpg" alt="RaiseTeck">
-<h3 class="l-work_description">スクール課題</h3>
-<p class="l-work_subdescription">HTML・CSS・JavaScript・GitHub</p>
-</div>
-
-<div class="l-work_description2 c-fadeUp">
-	
-<img class="l-pic l-pic2" src="<?php echo get_stylesheet_directory_uri(); ?>/img/Hamburger.jpg" alt="RaiseTeck">
-<h3 class="l-work_description">スクール課題</h3>
-<p class="l-work_subdescription">HTML・CSS・JavaScript・WordPress・GitHub</p>
-</div>
-
-
-<div class="c-more">
-	<a href="">more</a>
-</div>
-
-</div>
 </section>
 
-<!-- skill -->
-<section class="l-skill">
-<div class="round-wrap">
-<div class="l-margin l-margin_left c-round">
-<h1 class="l-fontsize_large l-rotate l-line_height" >Skill </h1>
-<h3 class="l-fontsize_sub l-rotate">できること</h3>
-</div>
-
-
-<div class="l-skill_description1 l-flex">
-<h3 class="l-work_description">コーディング</h3>
-<img class="l-pic_skill" src="<?php echo get_stylesheet_directory_uri(); ?>/img/PC.jpg" alt="パソコン">
-</div>
-<p class="l-skill_description">HTML・CSS・JavaScript・GitHub</p>
-
-<div class="l-skill_description2 l-flex">
-<h3 class="l-work_description">デザイン</h3>
-<img class="l-pic_skill" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pen.jpg" alt="パソコン">
-</div>
-<p class="l-skill_description">figma</p>
-
+<ul class="works-production">
+<?php
+  $args = array(
+    'posts_per_page' => 5 // 表示件数の指定
+  );
+  $posts = get_posts( $args );
+  foreach ( $posts as $post ): // ループの開始
+  setup_postdata( $post ); // 記事データの取得
+?>
+  <li class="works-production_second box">
+  <a href="<?php the_permalink(); ?>">
+  <p class="img">
+  <?php the_post_thumbnail('thumbnail'); ?>
+ 
+  </p>
+  <h3 class="workd-title">
+   <?php the_title(); ?>
+  </h3>
+    </a>
+   
+  </li>
+<?php
+  endforeach; // ループの終了
+  wp_reset_postdata(); // 直前のクエリを復元する
+?>
+</ul>
 
 <div class="c-more">
-	<a href="">more</a>
+	<a href="http://my-portfolio.local/works/">more</a>
 </div>
-</div>
-</section>
 
 <div class="c-scroll">
 <p class=c-scroll_arrow>↑</p>
+<!-- <p class=c-scroll_arrow>↑</p> -->
 	<a href="#top" class="scroll-up-box">
 	
 	</a>

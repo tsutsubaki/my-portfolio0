@@ -1,4 +1,3 @@
-
 <?php
 function custom_theme_support() {
     

@@ -115,12 +115,15 @@
 
 
 .p-header__hamburger {
-    z-index: 100;
     position: absolute;
     top: 0;
     right: 0;
     width: 95px;
     height: 100%;
+
+    @include g.mq(md) {
+        display: none;
+    }
 }
 
 .p-header__nav.is-active {
@@ -133,9 +136,9 @@
 
 }
 
+
 .p-nav {
     padding-top: 72px;
-    padding-bottom: 72px;
 
 
 }
@@ -173,4 +176,7 @@
     font-size: 3.0vw;
     background: linear-gradient(to right, transparent, #97d0fe);
     padding-right: 2vw;
+    margin-top: 2vw;
 }
+
+//トップページへのリンク

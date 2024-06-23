@@ -12,9 +12,10 @@ Template Name: HAMBURGER page
 
 <?php the_post_thumbnail('large'); ?>
 </div>
-<div class="l-main_contents">
+<div class="l-main_contents ">
+  
 				<!-- 👇記事のタイトル -->
-        <h1><?php the_title(); ?></h1>
+        <!-- <h1><?php the_title(); ?></h1> -->
 				<!-- 👇記事の本文 -->
         <?php the_content(); ?>
 

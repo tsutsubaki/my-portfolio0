@@ -1,0 +1,66 @@
+@use '../../foundation/global' as g;
+
+/* フォーム全体のスタイル */
+.wpcf7-form {
+    margin: 0 auto;
+    /* 中央揃え */
+    background-color: #f9f9f9;
+    /* フォームの背景色 */
+    padding: 20px;
+    border-radius: 8px;
+    /* 角丸 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 影 */
+}
+
+
+/* ラベルのスタイル */
+.wpcf7-form p label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    /* ラベルのテキスト色 */
+}
+
+
+/* 入力フィールドのスタイル */
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* 送信ボタンのスタイル */
+.wpcf7-form input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #007bff;
+    /* ボタンの背景色 */
+    color: #fff;
+    /* ボタンのテキスト色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.wpcf7-form input[type="submit"]:hover {
+    background-color: #0056b3;
+    /* ボタンのホバー時の背景色 */
+}
+
+.contact-form {
+
+    font-size: 2.1vw;
+
+}
+
+.contact-form span {
+    color: #fb0b0bd4;
+}

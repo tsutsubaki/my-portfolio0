@@ -2,7 +2,7 @@
 
 main {
     position: relative;
-    text-align: center;
+    margin: 5vw 12vw;
 }
 
 .l-main_contents h1 {
@@ -15,7 +15,7 @@ main {
 
 .l-fontsize_sub {
     font-size: 3vw;
-    line-height: 11vw;
+    line-height: 20vw;
 }
 
 //文字を縦書きにする
@@ -24,16 +24,23 @@ main {
 }
 
 .l-margin {
-    margin-top: 25vw;
+    margin-top: 10vw;
     margin-left: -15vw;
 }
 
 .l-margin_right {
-    margin: 23vw 0 13vw 63vw;
+    margin: 5vw 0 -24vw 63vw;
+
+    @include g.mq(md) {
+        margin-top: 7vw;
+
+    }
+
+
 }
 
 .l-margin_left {
-    margin-top: 12vw;
+    margin-top: 18vw;
 }
 
 .l-flex {
@@ -53,6 +60,16 @@ main {
     color: #ffffffff;
     -webkit-text-stroke: 1px #333;
     margin-top: -2vw;
-    font-size: 7vw;
-    margin-left: 3vw;
+    font-size: 6vw;
+    margin-left: 8vw;
+}
+
+.l-pc_flex {
+    @include g.mq(md) {
+        display: flex;
+    }
+}
+
+.l-pc_pic {
+    position: relative;
 }

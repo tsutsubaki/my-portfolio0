@@ -2,18 +2,20 @@
 @use "./foundation/base";
 @use "./foundation/breakpoint";
 @use "./foundation/color";
-@use "./foundation/global.scss";
+@use "./foundation/global";
 
 @use "./layout/l-footer";
 @use "./layout/l-header";
 @use "./layout/l-main";
 @use "./layout/l-sidebar";
+@use"./layout/l-blog";
 
 @use "./object/component/_c-button";
 @use "./object/component/c-logo";
 @use "./object/component/c-info-category";
 @use "./object/component/c-scroll";
 @use "./object/component/c-fadeUP";
+@use "./object/component/c-contact-form";
 
 @use "./object/project/p-nav";
 @use "./object/project/p-md-nav";
